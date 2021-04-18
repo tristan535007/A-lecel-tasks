@@ -1,0 +1,145 @@
+let schema = buildSchema(`
+        type User {
+             _id: String
+             createdAt: String
+             login: String
+             nick : String
+             avatar: Image
+             likes: [Like]
+             likesCount: Int
+             incomings: [Direct]
+             followers: [User]
+             following: [User]
+        }
+
+        input UserInput {
+             _id: String
+             login: String
+             nick : String
+             avatar: ImageInput
+             following: [UserInput]
+        }
+
+        type Like {
+            _id: ID,
+            post: Post,
+            comment: Comment,
+            direct: Direct,
+            owner: User
+        }
+
+        input LikeInput {
+            _id: ID,
+            post: PostInput,
+            comment: CommentInput,
+            direct: DirectInput,
+            user: UserInput,
+        }
+
+        type Post {
+            _id: ID,
+            createdAt: String
+            title: String
+            text: String,
+            images: [Image],
+            comments: [Comment],
+            directs: [Direct],
+            collections: [Collection]
+            likes: [Like]
+            likesCount: Int
+            owner: User
+        }
+
+        input PostInput {
+            _id: ID,
+            title: String,
+            text: String,
+            images: [ImageInput],
+            comments: [CommentInput],
+            directs: [DirectInput],
+            collections: [CollectionInput]
+        }
+
+        type Image {
+            _id: ID,
+            text: String,
+            url: String,
+            originalFileName: String,
+            userAvatar: User,
+            posts: [Post],
+            directs: [Direct]
+            owner: User
+        }
+
+        input ImageInput {
+            _id: ID,
+            text: String,
+            userAvatar: UserInput,
+            posts: [PostInput],
+            directs: [DirectInput]
+        }
+
+        type Comment {
+            _id: ID,
+            createdAt: String,
+            text: String,
+            post: Post,
+            answers: [Comment],
+            answerTo: Comment
+            likes: [Like]
+            likesCount: Int
+            owner: User
+        }
+
+        input CommentInput {
+            _id: ID,
+            text: String,
+            post: PostInput,
+            answers: [CommentInput],
+            answerTo: CommentInput
+        }
+
+        type Direct {
+            _id: ID,
+            createdAt: String,
+            text: String,
+            post: Post,
+            image: Image,
+            likes: [Like]
+            likesCount: Int
+            to: User
+            owner: User
+        }
+
+        input DirectInput {
+            _id: ID,
+            text: String,
+            post: PostInput,
+            image: ImageInput,
+            likes: [LikeInput]
+            to: UserInput
+        }
+
+        type Collection {
+            _id: ID,
+            text: String,
+            posts: [Post]
+            owner: User
+        }
+
+        input CollectionInput {
+            _id: ID,
+            text: String,
+            posts: [PostInput]
+        }
+    `);
+
+
+
+
+
+
+
+
+
+

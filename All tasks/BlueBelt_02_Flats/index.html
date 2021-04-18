@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home work JS-blue belt - Flats</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        border: 2px solid gray;
+        background: rgb(231, 210, 210);
+        padding: 0 10px;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+      }
+      #floor,
+      #entrance {
+        background: #fff;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+      }
+      #button {
+        margin: 5px 0;
+      }
+      h2,
+      p {
+        color: gray;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        margin: 5px 0;
+      }
+    </style>
+
+    <div class="container">
+      <h2>
+        It's a calculator which help you to count an entrance and a floor of
+        building.
+      </h2>
+
+      <p>Conditions: You have 9 floors and 4 flats on the floor</p>
+      <div class="wrapper">
+        <span>Number of entrance:</span>
+        <output id="entrance">0</output>
+      </div>
+      <div class="wrapper">
+        <span>Number of floor:</span> <output id="floor">0</output>
+      </div>
+      <div class="wrapper">
+        <span>Enter a number of flat: </span>
+        <input type="text" id="flatNumber" value="" placeholder="Flat number" />
+      </div>
+      <button id="button" onclick="getData()">Get a result</button>
+    </div>
+    <script src="./JavaScript/BlueBelt.js"></script>
+  </body>
+</html>

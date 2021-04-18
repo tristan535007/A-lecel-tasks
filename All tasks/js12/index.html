@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home work JS-12 Chat Homework</title>
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      #conteiner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: flex-end;
+        align-items: baseline;
+        width: 500px;
+        max-height: 500px;
+        height: 400px;
+        border: solid 2px grey;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: lightblue;
+
+        margin: 5px auto;
+      }
+      #nick,
+      #message {
+        height: 20px;
+      }
+      #send {
+        height: 25px;
+      }
+      #smiles_box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: scroll;
+        border: 3px dotted gray;
+        width: 500px;
+        height: 200px;
+        padding: 5px;
+        margin: 5px auto;
+      }
+      .emoji_box {
+        height: auto;
+        width: auto;
+      }
+      #chat_window {
+        width: 450px;
+        height: 350px;
+        margin-bottom: 20px;
+        background-color: rgb(245, 234, 214);
+        overflow: scroll;
+      }
+    </style>
+
+    <div id="conteiner">
+      <div id="chat_window"></div>
+      <input type="text" id="nick" value="Pall" />
+      <input type="text" id="message" value="" placeholder="some msg" />
+      <button id="send">SEND</button>
+    </div>
+    <div id="smiles_box"></div>
+    <script src="./JavaScript/script.js"></script>
+  </body>
+</html>

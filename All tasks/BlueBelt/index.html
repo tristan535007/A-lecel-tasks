@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home work JS-blue belt</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        border: 2px solid gray;
+        background: rgb(231, 210, 210);
+        padding: 0 10px;
+      }
+      #login,
+      #password {
+        margin: 5px 0px;
+        padding-left: 15px;
+        color: grey;
+      }
+      #buttonLog {
+        margin-bottom: 5px;
+        width: 25%;
+        height: 30px;
+        border-radius: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid black;
+      }
+    </style>
+
+    <div class="container">
+      <input id="login" type="text" value="login" />
+      <input id="password" type="text" value="password" />
+      <button id="buttonLog" onclick="getData()">try it</button>
+    </div>
+    <script src="./JavaScript/BlueBelt.js"></script>
+  </body>
+</html>

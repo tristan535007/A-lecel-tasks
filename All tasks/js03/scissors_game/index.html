@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home work JS-blue belt - Flats</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        border: 2px solid gray;
+        background: rgb(231, 210, 210);
+        padding: 0 10px;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+      }
+
+      #user_window,
+      #computer_window,
+      #user_window-result {
+        background: #fff;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+      }
+
+      #button {
+        margin: 5px 0;
+      }
+
+      h2,
+      p {
+        color: gray;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        margin: 5px 0;
+      }
+      #input_field {
+        height: 20px;
+        margin-top: 10px;
+      }
+    </style>
+
+    <div class="container">
+      <h2>Scissors Game</h2>
+      <div class="wrapper">
+        <span>Your input window:</span>
+        <output id="user_window">-</output>
+      </div>
+      <div class="wrapper">
+        <span>Computer window:</span>
+        <output id="computer_window">-</output>
+      </div>
+      <div class="wrapper">
+        <span>Your game result:</span>
+        <output id="user_window-result">-</output>
+      </div>
+      <div class="wrapper">
+        <span>Enter 1 of 3 options: stone, scissors or paper. </span>
+        <input
+          type="text"
+          id="input_field"
+          value=""
+          placeholder="1 of 3 options"
+        />
+      </div>
+      <button id="button" onclick="getData()">Get a result</button>
+    </div>
+    <script src="JavaScript/script.js"></script>
+  </body>
+</html>
